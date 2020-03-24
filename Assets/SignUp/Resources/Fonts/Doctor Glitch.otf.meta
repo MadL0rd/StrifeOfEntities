@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 204ca34c2bc59ad4fb914cdb863adb1e
+timeCreated: 1525944030
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Doctor Glitch
+  fontNames:
+  - Doctor Glitch
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,212 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3873063087889165646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3873063087889165647}
+  - component: {fileID: 3873063087889165645}
+  - component: {fileID: 3873063087889165644}
+  m_Layer: 0
+  m_Name: MenuController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3873063087889165647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873063087889165646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.921875, y: -13.183585, z: 36.030426}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3873063087889165645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873063087889165646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71d8bc44722aa4428acc55d913ff75a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainMenu: {fileID: 0}
+  Shop: {fileID: 0}
+  Inventory: {fileID: 0}
+  BackButton: {fileID: 0}
+  RequestPanel: {fileID: 0}
+  OpponentFinding: {fileID: 0}
+  AcknowledgmentPanel: {fileID: 0}
+  nick: {fileID: 0}
+  Currency: {fileID: 0}
+  env: {fileID: 0}
+  bird: {fileID: 0}
+  crystal: {fileID: 0}
+  SpawnPlaceShop: {fileID: 0}
+  SpawnPlaceInventory: {fileID: 0}
+  Card: {fileID: 5343418979254561545, guid: e76721b4dc68c4846b836b628610017d, type: 3}
+  CurrencyImg: {fileID: 600382962377953324, guid: 07b2455f8fb546849b0d6d262b73295b,
+    type: 3}
+--- !u!114 &3873063087889165644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873063087889165646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e0fd1f89040546408e3474da2c30d7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skins:
+  - id: 0
+    type: 0
+    name: Tree
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 1309678789429148, guid: e6edd79faab9e604b999af9cb3da443b, type: 3}
+    prefab1: {fileID: 1001317604830226, guid: f4456cf88f5dc1641af20cd2833ac88b, type: 3}
+    prefab4card: {fileID: 4414184324333171392, guid: fa02ddd533eab594eab012ef2604af7f,
+      type: 3}
+  - id: 0
+    type: 0
+    name: SnowTree
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 1042774898095374, guid: 676f391b053f5e74bac1b02b6dca6548, type: 3}
+    prefab1: {fileID: 1044093076259022, guid: ae9769ebb9a125f40b5aa3143d5ebdca, type: 3}
+    prefab4card: {fileID: 8321423029826452451, guid: b4152acc97a715a4caf773382dfbf00a,
+      type: 3}
+  - id: 0
+    type: 2
+    name: Crystal
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 1127194219472088, guid: 2d54a5bbab305bb4eae07127d08acb44, type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 3235933970035455056, guid: dde84e09f51e42f44985bfe109c2ddbb,
+      type: 3}
+  - id: 0
+    type: 1
+    name: Raven
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 1690942074390162, guid: 6761223fdb5ee5442982406c0e2d72f9, type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 1690942074390162, guid: 1d43ad72acdae17439e3a06601d09772,
+      type: 3}
+  - id: 0
+    type: 1
+    name: chickadee
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 3337194778191824004, guid: d7abe04a7da98ed43a326b52e9c8bc46,
+      type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 3337194778191824004, guid: 14753fd76030a9d43acfe8c8b6dbf5e4,
+      type: 3}
+  - id: 0
+    type: 1
+    name: BlueJay
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 61727493277657273, guid: 594a511ccb59a424686be5abf342ff78, type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 61727493277657273, guid: dd39e4b022a7de44f9fe5d7083e553dc,
+      type: 3}
+  - id: 0
+    type: 1
+    name: Cardinal
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 262827819949480100, guid: 264fa8133d547a044a2baaa5d83e9067, type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 262827819949480100, guid: 567187dc7ef4eb24ab6c6600ba900c87,
+      type: 3}
+  - id: 0
+    type: 1
+    name: GoldFinch
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 6544442308217051563, guid: 7e21bf50e3c813b4d88b06f808a000b0,
+      type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 6544442308217051563, guid: 82fc305329fa58d45ade0c459101cde1,
+      type: 3}
+  - id: 0
+    type: 2
+    name: MagmaCrystal
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 2
+    prefab: {fileID: 1967794665338811549, guid: 36b96c01931d4a34e8da7d22b6fd2e3f,
+      type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 7750692427903590901, guid: f1764e8a13c9a9d42bd6bc3f4c9718d1,
+      type: 3}
+  - id: 0
+    type: 2
+    name: Meteorite
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 2
+    prefab: {fileID: 8262331400255571234, guid: 2b5ae52c40d4ee44394d5f3bcef38af1,
+      type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 6055844080396284393, guid: 098191ce405178141bdda67e7dfba261,
+      type: 3}
+  - id: 0
+    type: 2
+    name: SphereGem
+    own: 0
+    equiped: 0
+    price: 0
+    currency: 0
+    rarity: 0
+    prefab: {fileID: 329507722091425626, guid: a8b7e598870508645984319b5b02c7b3, type: 3}
+    prefab1: {fileID: 0}
+    prefab4card: {fileID: 1747396865014852888, guid: 5b782b72bbc843b48a295564964e8a76,
+      type: 3}
