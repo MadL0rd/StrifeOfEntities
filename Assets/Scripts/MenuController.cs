@@ -4,10 +4,9 @@ using GameSparks.Core;
 using GameSparksTutorials;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
-
-
 
 public class MenuController : MonoBehaviour
 {
@@ -45,7 +44,9 @@ public class MenuController : MonoBehaviour
     private float timerBorder = 40;
     void Start()
     {
+        UnityEngine.Debug.Log("Rot ebal!!!");
         timerOn = false;
+
         timer = 0;
         // RequestController.ResetCount();
 

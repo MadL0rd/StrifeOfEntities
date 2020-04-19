@@ -12,22 +12,31 @@ namespace GameSparksTutorials
         [SerializeField]
         private InputField password;
 
+        private SceneLoading SceneLoader;
+        private bool firstAuthenticationTry;
+
+        Login()
+        {
+            firstAuthenticationTry = true;
+            string storedUsername = PlayerPrefs.GetString("login");
+            string storedPassword = PlayerPrefs.GetString("password");
+
+            EventManager.StartListening<string>("OnLoginResponse", OnLoginResponse);
+            GS_Authentication.Login(storedUsername, storedPassword, "OnLoginResponse");
+        }
+
         public void UserLogin()
         {
-            EventManager.StartListening<string>("OnLoginResponse", OnLoginResponse);
+            firstAuthenticationTry = false;
+            PlayerPrefs.SetString("login", username.text);
+            PlayerPrefs.SetString("password", password.text);
 
+            EventManager.StartListening<string>("OnLoginResponse", OnLoginResponse);
             GS_Authentication.Login(username.text, password.text, "OnLoginResponse");
         }
 
-        public void GuestLogin()
-        {
-            EventManager.StartListening<string>("OnGuestLoginResponse", OnGuestLoginResponse);
-
-            GS_Authentication.DeviceAuthentication("OnGuestLoginResponse");
-        }
-
         public void SignUp()
-        {
+        { 
             UIController.SetActivePanel(UI_Element.SignUp);
         }
 
@@ -36,32 +45,23 @@ namespace GameSparksTutorials
             if (displayName.Length > 0)
             {
                 DataController.SaveValue("displayName", displayName);
-
-                UIController.SetActivePanel(UI_Element.MainMenu);
-
                 PlayerLog.GlobalMessage("Login success");
-            } else
+                if (firstAuthenticationTry)
+                {
+                    SceneLoader.LoadMenuScene();
+                }
+                else
+                {
+                    UIController.SetActivePanel(UI_Element.MainMenu);
+                }
+            }
+            else
             {
                 Debug.Log("Error OnLoginResponse");
                 PlayerLog.GlobalMessage("Login error");
             }
 
             EventManager.StopListening<string>("OnLoginResponse", OnLoginResponse);
-        }
-
-        private void OnGuestLoginResponse(string displayName)
-        {
-            if (displayName.Length > 0)
-            {
-                OnLoginResponse(displayName);
-
-                PopUpMessage.ActivatePopUp(delegate { UIController.SetActivePanel(UI_Element.SignUp); }, "Sign Up to build & make friends!");
-            } else
-            {
-                Debug.Log("Error OnGuestLoginResponse");
-            }
-
-            EventManager.StopListening<string>("OnGuestLoginResponse", OnGuestLoginResponse);
         }
     }
 }
