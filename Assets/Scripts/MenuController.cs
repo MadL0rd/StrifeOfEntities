@@ -44,7 +44,6 @@ public class MenuController : MonoBehaviour
     private float timerBorder = 40;
     void Start()
     {
-        UnityEngine.Debug.Log("Rot ebal!!!");
         timerOn = false;
 
         timer = 0;
@@ -120,6 +119,7 @@ public class MenuController : MonoBehaviour
             string opponentBird = JsonParcer.GetParamByName(message.JSONString, "skinBird");
             string uFirst = JsonParcer.GetParamByName(message.JSONString, "uFirst");
             string oNick = JsonParcer.GetParamByName(message.JSONString, "nick");
+            string myNick = JsonParcer.GetParamByName(message.JSONString, "myNick");
 
             SkinItem oEnvieronment = skins.Find(u => u.name == opponentEnvieronment);
             SkinItem oCrystal = skins.Find(u => u.name == opponentCrystal);
@@ -132,7 +132,7 @@ public class MenuController : MonoBehaviour
                 SkinManager.envieronment1 = Player.skinEnvieronment;
                 SkinManager.bird1 = Player.skinBird;
                 SkinManager.crystal1 = Player.skinCrystal;
-                SkinManager.nick1 = Player.displayName;
+                SkinManager.nick1 = Player.displayName ?? myNick;
 
                 SkinManager.envieronment2 = oEnvieronment;
                 SkinManager.bird2 = oBird;
@@ -146,7 +146,7 @@ public class MenuController : MonoBehaviour
                 SkinManager.envieronment2 = Player.skinEnvieronment.name == oEnvieronment.name ? Player.skinEnvieronment2 : Player.skinEnvieronment;
                 SkinManager.bird2 = Player.skinBird;
                 SkinManager.crystal2 = Player.skinCrystal;
-                SkinManager.nick2 = Player.displayName;
+                SkinManager.nick2 = Player.displayName ?? myNick;
 
                 SkinManager.envieronment1 = oEnvieronment;
                 SkinManager.bird1 = oBird;
